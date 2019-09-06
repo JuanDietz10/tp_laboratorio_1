@@ -1,7 +1,6 @@
 
 #include <stdio.h>
 #include "inout.h"
-//#include "strings_esp.h"
 #include "strings_eng.h"
 
 void welcome(void)
@@ -20,7 +19,7 @@ void welcome(void)
     return salida;
 }*/
 
-/** \brief Recibe dos valores numéricos enteros
+/** \brief Recibe dos valores numÃ©ricos enteros
  *
  * \param Valor correspondiente a la variable A
  * \param Valor correspondiente a la variable B
@@ -35,7 +34,7 @@ void printValues(int a, int b)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -47,7 +46,7 @@ void printLine(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -59,7 +58,7 @@ void printInputValueA(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -71,7 +70,7 @@ void printInputValueB(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -82,7 +81,7 @@ void printInputOperation(void)
 }
 
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado de la suma
  * \return devuelve un string y un valor
@@ -94,7 +93,7 @@ void printSum(float resultado)
     return;
 }
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado de la resta
  * \return devuelve un string y un valor
@@ -106,7 +105,7 @@ void printSubtraction(float resultado)
     return;
 }
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado de la division
  * \return devuelve un string y un valor
@@ -118,7 +117,7 @@ void printDivision(float resultado)
     return;
 }
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado de la multiplicacion
  * \return devuelve un string y un valor
@@ -130,7 +129,7 @@ void printMultiplication(float resultado)
     return;
 }
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado del factorial de A
  * \return devuelve un string y un valor
@@ -142,7 +141,7 @@ void printFactorialA(float resultado)
     return;
 }
 
-/** \brief Recibe un valor numérico y lo imprime con una descripción(string)
+/** \brief Recibe un valor numÃ©rico y lo imprime con una descripciÃ³n(string)
  *
  * \param Valor correspondiente al resultado del factorial de B
  * \return devuelve un string y un valor
@@ -156,7 +155,7 @@ void printFactorialB(float resultado)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -168,7 +167,7 @@ void printGoodbye(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -180,7 +179,7 @@ void printInvalidOperation(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -192,7 +191,7 @@ void printErrorDivByCero(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -204,7 +203,7 @@ void printInvalidInput(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
@@ -216,7 +215,7 @@ void printErrorFactNegative(void)
 
 /** \brief Imprime un string
  *
- * \param no recibe ningún parametro
+ * \param no recibe ningÃºn parametro
  * \return imprime un string
  *
  */
