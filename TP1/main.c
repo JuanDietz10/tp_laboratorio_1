@@ -1,7 +1,7 @@
 
 /*
-En el archivo principal o main, se ubica la lÛgica del programa, sin incluir funciones o cadenas de caracteres,
-los cuales deberÌan ir en un archivo aparte para luego llamar a dichas funciones cuando sea necesario utilizarlas.
+En el archivo principal o main, se ubica la l√≥gica del programa, sin incluir funciones o cadenas de caracteres,
+los cuales deber√≠an ir en un archivo aparte para luego llamar a dichas funciones cuando sea necesario utilizarlas.
 */
 
 #include <stdio.h>
@@ -11,8 +11,6 @@ los cuales deberÌan ir en un archivo aparte para luego llamar a dichas funciones
 #include "operations.h"
 #include "menu.h"
 #include "inout.h"
-
-    // VALIDAR SI SE CARGO A Y B ANTES DE REALIZAR ALGUNA OPERACION: USAR BANDERA UNO PARA A Y OTRO PARA B
 
 int main()
 {
@@ -50,7 +48,7 @@ int main()
 
     system("cls");
 
-    while(exit==0) //Mientras la variable Exit, que es e tipo booleano, sea igual a cero, el programa ejecutar· las sentencias para realizar operaciones o seleccionar nuevos valores
+    while(exit==0) //Mientras la variable Exit, que es e tipo booleano, sea igual a cero, el programa ejecutar√° las sentencias para realizar operaciones o seleccionar nuevos valores
     {
     	printValues(valueA, valueB);
 
@@ -117,7 +115,7 @@ int main()
 
         	    break;
 
-            case 'c':                 //En caso de que se ingrese el caracter 'c', se volver· a pedir en ingreso de las variableas
+            case 'c':                 //En caso de que se ingrese el caracter 'c', se volver√° a pedir en ingreso de las variableas
                 system("cls");
 
                 do
