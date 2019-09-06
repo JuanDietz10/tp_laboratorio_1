@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1567207445 source:d:\codeblocks\workspace\programacion1\tp1\tp1\inout.c
+	<stdio.h>
+	"inout.h"
+	"strings.h"
+
+1567207464 d:\codeblocks\workspace\programacion1\tp1\tp1\inout.h
+
+1567207423 d:\codeblocks\workspace\programacion1\tp1\tp1\strings.h
+
+1567207353 source:d:\codeblocks\workspace\programacion1\tp1\tp1\menu.c
+	<stdio.h>
+	"strings.h"
+	"menu.h"
+
+1567207370 d:\codeblocks\workspace\programacion1\tp1\tp1\menu.h
+
+1567208390 source:d:\codeblocks\workspace\programacion1\tp1\tp1\operaciones.c
+	<stdio.h>
+	"operaciones.h"
+
+1567207334 d:\codeblocks\workspace\programacion1\tp1\tp1\operaciones.h
+
+1567210266 source:d:\codeblocks\workspace\programacion1\tp1\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"operaciones.h"
+	"menu.h"
+	"inout.h"
+
+1567731665 source:c:\users\john\desktop\tp1\inout.c
+	<stdio.h>
+	"inout.h"
+	"strings_eng.h"
+
+1567725265 c:\users\john\desktop\tp1\inout.h
+
+1567423190 c:\users\john\desktop\tp1\strings.h
+
+1567725537 source:c:\users\john\desktop\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<conio.h>
+	"operations.h"
+	"menu.h"
+	"inout.h"
+
+1567712336 c:\users\john\desktop\tp1\operaciones.h
+
+1567712376 c:\users\john\desktop\tp1\menu.h
+
+1567725647 source:c:\users\john\desktop\tp1\menu.c
+	<stdio.h>
+	"strings_eng.h"
+	"menu.h"
+
+1567716758 source:c:\users\john\desktop\tp1\operaciones.c
+
+1567708191 c:\users\john\desktop\tp1\strings_esp.h
+
+1567726149 c:\users\john\desktop\tp1\strings_eng.h
+
+1567726319 source:c:\users\john\desktop\tp1\operations.c
+	<stdio.h>
+	"operations.h"
+
+1567716788 c:\users\john\desktop\tp1\operations.h
+
