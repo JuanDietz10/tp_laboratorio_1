@@ -57,7 +57,7 @@ int main()
     	fflush(stdin);
 
     	printInputOperation();
-    	operation=getch(); //le asigna a la variable operation un caracter ingreaso por teclado
+    	operation=getch(); //le asigna a la variable operation un caracter ingresado por teclado
 
         system("cls");
 
@@ -100,8 +100,7 @@ int main()
                     result=factorial(valueA);
                     printFactorialA(result);
                 }
-
-        	    break;
+                break;
 
             case 'b':
         	    if(valueB<0)
@@ -112,8 +111,7 @@ int main()
                     result=factorial(valueB);
                     printFactorialB(result);
                 }
-
-        	    break;
+                break;
 
             case 'c':                 //En caso de que se ingrese el caracter 'c', se volverá a pedir en ingreso de las variableas
                 system("cls");
