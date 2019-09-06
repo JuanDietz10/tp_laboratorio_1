@@ -32,7 +32,7 @@ int main()
     {
         fflush(stdin); //Limpia el buffer. __fpurge(stdin); para Linux
         printInputValueA();
-        state=scanf("%d", &valueA); //Se ingresa el primer valor numerico de tipo entero. Cuando la variable valor1 recibe correctamente un numero valido, el estado de scanf pasa a ser 1
+        state=scanf("%d", &valueA); //Se ingresa el primer valor numerico de tipo entero. Cuando la variable valueA recibe correctamente un numero valido, el estado de scanf pasa a ser 1
         system("cls");
 
     }while(state!=1); // state!=1 valida que se haya ingresado un numero correctamente
