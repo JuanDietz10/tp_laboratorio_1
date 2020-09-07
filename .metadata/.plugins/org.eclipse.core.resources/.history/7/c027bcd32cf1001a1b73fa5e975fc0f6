@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+#include "inout.h"
+#include "strings_eng.h"
+
+void welcome(void)
+{
+    printf("\n%s\n", LINE);
+    printf("%s\n"  , MSG_WELCOME);
+    printf("%s\n\n", LINE);
+
+    return;
+}
+

@@ -859,3 +859,93 @@ gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "s
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+13:45:30 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+13:47:00 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+13:52:07 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+13:54:43 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inout.o" "..\\src\\inout.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+14:05:23 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inout.o" "..\\src\\inout.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+14:08:17 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inout.o" "..\\src\\inout.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\menu.o: in function `welcome':
+D:\eclipse-workspace\tp_laboratorio_1\TP1\Debug/../src/menu.c:7: multiple definition of `welcome'; src\inout.o:D:\eclipse-workspace\tp_laboratorio_1\TP1\Debug/../src/inout.c:7: first defined here
+collect2.exe: error: ld returned 1 exit status
+14:09:04 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inout.o" "..\\src\\inout.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+14:14:47 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inout.o" "..\\src\\inout.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+14:15:34 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\inout.o" "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+14:16:41 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+..\src\menu.c:3:10: fatal error: inout.h: No such file or directory
+    3 | #include "inout.h"
+      |          ^~~~~~~~~
+compilation terminated.
+14:17:03 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+15:18:34 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+15:19:26 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+15:19:55 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+15:20:08 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+15:20:25 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 

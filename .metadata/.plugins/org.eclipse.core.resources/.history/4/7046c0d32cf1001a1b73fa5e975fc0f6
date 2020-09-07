@@ -2,6 +2,6 @@
 #ifndef INOUT_H
 #define INOUT_H
 
-void welcome(void);
+void welcome               (void);
 
 #endif

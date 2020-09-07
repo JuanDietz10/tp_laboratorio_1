@@ -31,7 +31,6 @@ int main()
 
 
     welcome();
-    while(!scanf("%c", &confirm));
 
     while( inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -9999999, 9999999, 10) != 0); // state!=1 valida que se haya ingresado un numero correctamente
 
