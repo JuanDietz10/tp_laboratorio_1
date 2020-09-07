@@ -5,6 +5,7 @@
 int  getValue              (void);
 void welcome               (void);
 void printLine             (void);
+void printCalculate        (void);
 void printInputValueA      (void);
 void printInputValueB      (void);
 void printInputOperation   (void);

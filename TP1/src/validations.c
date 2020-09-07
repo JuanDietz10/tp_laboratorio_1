@@ -6,10 +6,17 @@
  */
 #include "validations.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 //#include <stdbool.h>
 //#include <stdio_ext.h>
 
-int getInt   (int*   pResult, char* inputMessage, char* errorMessage, int   min, int   max, int retrys)
+
+
+
+/* Integers */
+
+int inputInt (int*   pResult, char* inputMessage, char* errorMessage, int   min, int   max, int retrys)
 {
 	int status = -1;
 
@@ -20,9 +27,8 @@ int getInt   (int*   pResult, char* inputMessage, char* errorMessage, int   min,
 		do
 		{
 			printf("%s", inputMessage);
-			fflush(stdin); //  fpurge   __fflush
 
-			if(scanf("%d", &bufferInt)==1 && bufferInt >= min && bufferInt <= max) // Valida que sea un numero y esté dentro de los parametros maximo y minumo
+			if(getInt(&bufferInt)==0 && bufferInt >= min && bufferInt <= max) // Valida que sea un numero y esté dentro de los parametros maximo y minumo
 			{
 				*pResult=bufferInt;
 				status=0;
@@ -38,6 +44,48 @@ int getInt   (int*   pResult, char* inputMessage, char* errorMessage, int   min,
 	return status;
 }
 
+
+int isNumber (char* cadena)
+{
+	int i=0;
+	int retorno = 1;
+	if (cadena != NULL && strlen (cadena) > 0)
+	{
+		while (cadena[i] != '\0' )
+		{
+			if (cadena[i] < '0' || cadena[i] > '9' )
+			{
+				if(!(i==0 && cadena[i] == '-' && strlen(cadena) > 1)) //Valida que si en la posicion anterior al numero hay un signo (-) se trata de un numero negativo y no lo descarta
+				{
+					retorno = 0;
+					break ;
+				}
+			}
+			i++;
+		}
+	}
+	return retorno;
+}
+
+
+
+int getInt (int* pResultado)
+{
+	int retorno=-1;
+	char buffer[64];
+	if (pResultado != NULL)
+	{
+		if (getChar(buffer, sizeof (buffer))==0 && isNumber(buffer))
+		{
+			*pResultado = atoi (buffer);
+			retorno = 0;
+		}
+	}
+	return retorno;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Floats */
 
 int getFloat (float* pResult, char* inputMessage, char* errorMessage, float min, float max, int retrys)
 {
@@ -70,7 +118,28 @@ int getFloat (float* pResult, char* inputMessage, char* errorMessage, float min,
 }
 
 
-int getChar  (char*  pResult, char* inputMessage, char* errorMessage, char  min, char  max, int retrys)
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Chars */
+
+
+int getChar (char* cadena, int longitud)
+{
+	int retorno=-1;
+	fflush (stdin);
+	if (cadena != NULL && longitud >0 && fgets(cadena,longitud,stdin)==cadena)
+	{
+		fflush (stdin); // fflush o __fpurge
+		if (strlen (cadena) > 1 && cadena[ strlen (cadena)-1] == '\n')
+		{
+			cadena[ strlen (cadena)-1] = '\0' ;
+		}
+	retorno=0;
+	}
+	return retorno;
+}
+
+
+int getCharByNum  (char*  pResult, char* inputMessage, char* errorMessage, char  min, char  max, int retrys)
 {
 	int status = -1;
 
@@ -182,4 +251,6 @@ int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char
 
 		return status;
 }
+
+
 

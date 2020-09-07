@@ -32,6 +32,12 @@ void printValues(int a, int b)
     return;
 }
 
+void printCalculate(void)
+{
+    printf("\n\n%s\n", MSG_CALCULATE);
+    return;
+}
+
 /** \brief Imprime un string
  *
  * \param no recibe ningún parametro
@@ -221,6 +227,6 @@ void printErrorFactNegative(void)
  */
 void printExitConfirm(void)
 {
-    printf("\n%s\t", MSG_EXIT_CONFIRM);
+    printf("\n%s\n\t", MSG_EXIT_CONFIRM);
     return;
 }

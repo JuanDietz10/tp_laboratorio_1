@@ -14,7 +14,8 @@ En este archivo se definen las cadenas que se usan para dan un mensaje al usuari
 #define MSG_ERROR_FACT_NEGATIVE  " Cannot calculate negative number factorial"
 #define MSG_WELCOME              " You are welcome!"
 #define MSG_GOODBYE              " thank you, come back soon."
-#define MSG_EXIT_CONFIRM         " Exit?	  yes (Y)  /  no (n)"
+#define MSG_EXIT_CONFIRM         " Exit?	  yes (Enter)"
+#define MSG_CALCULATE            " Data entered successful!   Calculate all operations?       yes (Enter)"
 
 #define LINE                     "----------------------------------------"
 #define MSG_CODE                 "  Options                           Code"
