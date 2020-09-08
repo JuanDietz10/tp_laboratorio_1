@@ -1,91 +1,140 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "operations.h"
 
-//Desarrollo
 
-/** \brief Recibe dos valores numéricos enteros y calcula la suma
+
+/** \brief Recibe dos valores numéricos enteros, calcula la suma y devuelve el valor del resultado por referencia
  *
  * \param Valor correspondiente a la variable A
  * \param Valor correspondiente a la variable B
- * \return El resultado de la suma
+ * \param Valor correspondiente a la variable pResult
+ * \return Devuelve si hubo error o no
  *
  */
-int add(int a, int b)
+int add(int a, int b, float* pResult)
 {
-    int resultado;
+	int ret = -1;
+    int sum;
 
-    resultado=a+b;
-    return resultado;
-}
-
-/** \brief Recibe dos valores numéricos enteros y calcula la resta
- *
- * \param Valor correspondiente a la variable A
- * \param Valor correspondiente a la variable B
- * \return El resultado de la resta
- *
- */
-int subtract(int a, int b)
-{
-    int resultado;
-
-    resultado=a-b;
-    return resultado;
-}
-
-/** \brief Recibe dos valores numéricos enteros y calcula la multiplicación
- *
- * \param Valor correspondiente a la variable A
- * \param Valor correspondiente a la variable B
- * \return El resultado de la multiplicación
- *
- */
-int multiply(int a, int b)
-{
-    int resultado;
-
-    resultado=a*b;
-    return resultado;
-}
-
-/** \brief Recibe dos valores numéricos enteros y calcula la división
- *
- * \param Valor correspondiente a la variable A
- * \param Valor correspondiente a la variable B
- * \return El resultado de la división
- *
- */
-int divide(int a, int b, float* pResultado)
-{
-	int   retorno=-1;
-    float resultado;
-
-    if(b!=0 && pResultado!=NULL)
+    if(pResult!=NULL)
     {
-    	resultado=(float)a/b;
-    	*pResultado=resultado;
-    	retorno=0;
+    	if(abs(b)<=2147483647-abs(a)) //evitar overflow en una variable tipo int.
+		{
+			sum=a+b;
+			*pResult=(float)sum;
+			ret=0;
+		}else
+		{
+			ret=-2; //overflow
+		}
     }
-    return retorno;
+    return ret;
 }
 
-/** \brief Recibe dos valores numéricos enteros y calcula el factorial
+/** \brief Recibe dos valores numéricos enteros, calcula la resta y devuelve el valor del resultado por referencia
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \param Valor correspondiente a pResult, se guarda el resultado en el contenido de la direccion de memoria que guarda la variable
+ * \return Devuelve si hubo error o no
+ *
+ */
+int subtract(int a, int b, float* pResult)
+{
+	int ret = -1;
+	int subtraction;
+
+	if(pResult!=NULL)
+	{
+		subtraction=a-b;
+		*pResult=(float)subtraction;
+		ret=0;
+	}
+	return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros, calcula la multiplicacion y devuelve el valor del resultado por referencia
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \param Valor correspondiente a pResult, se guarda el resultado en el contenido de la direccion de memoria que guarda la variable
+ * \return Devuelve si hubo error o no
+ *
+ */
+int multiply(int a, int b, float* pResult)
+{
+	int ret = -1;
+	    int mult;
+
+	    if(pResult!=NULL)
+	    {
+	    	if(abs(b)<=2147483647/abs(a)) //evitar overflow en una variable tipo int.
+	    	{
+	    		mult=a*b;
+				*pResult=(float)mult;
+				ret=0;
+	    	}else
+	    	{
+	    		ret=-2; //overflow
+	    	}
+
+	    }
+	    return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros, calcula la division y devuelve el valor del resultado por referencia
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \param Valor correspondiente a pResult, se guarda el resultado en el contenido de la direccion de memoria que guarda la variable
+ * \return Devuelve si hubo error o no
+ *
+ */
+int divide(int a, int b, float* pResult)
+{
+	int   ret=-1;
+    float division;
+
+    if(b!=0 && pResult!=NULL)
+    {
+    	division=(float)a/b;
+    	*pResult=division;
+    	ret=0;
+    }
+    return ret;
+}
+
+/** \brief Recibe un valor numérico entero, calcula el factorial y devuelve el valor del resultado por referencia
  *
  * \param Valor correspondiente a la variable n
- * \return El resultado del factorial
+ * \param Valor correspondiente a ña variable pResult
+ * \return Devuelve si hubo error y el tipo de error
  *
  */
-int factorial(int n)
+int factorial(int n, float* pResult)
 {
-    int resultado=1;
-    int contador;
+	int ret=-1;
+    int result=1;
+    int count;
 
-    for(contador=1;contador<=n;contador++)
+    if(n>=0 && pResult!=NULL) //Dominio: numeros mayores o iguales a cero
     {
-        resultado*=contador;
+    	if(n<=12) //Evitar overflow, si se modifica el tipo de variable y/o sistema operativo el valor puede aumentar para usar numeros mayores
+    	{
+    		for(count=1;count<=n;count++)
+			{
+				result*=count;
+			}
+			*pResult=(float)result;
+			ret=0;
+    	}else
+    	{
+    		ret=-2; // Codigo para indicar overflow
+    	}
     }
-    return resultado;
+    return ret;
 }
 
 /*int factorial(int n)

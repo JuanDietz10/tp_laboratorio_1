@@ -1,0 +1,134 @@
+
+#include <stdio.h>
+#include "operations.h"
+
+//Desarrollo
+
+/** \brief Recibe dos valores numéricos enteros y calcula la suma
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \return El resultado de la suma
+ *
+ */
+int add(int a, int b, float* pResult)
+{
+	int ret = -1;
+    int sum;
+
+    if(pResult!=NULL)
+    {
+    	sum=a+b;
+		*pResult=(float)sum;
+		ret=0;
+    }
+    return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros y calcula la resta
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \return El resultado de la resta
+ *
+ */
+int subtract(int a, int b, float* pResult)
+{
+	int ret = -1;
+	int subtraction;
+
+	if(pResult!=NULL)
+	{
+		subtraction=a-b;
+		*pResult=(float)subtraction;
+		ret=0;
+	}
+	return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros y calcula la multiplicación
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \return El resultado de la multiplicación
+ *
+ */
+int multiply(int a, int b, float* pResult)
+{
+	int ret = -1;
+	    int result;
+
+	    if(pResult!=NULL)
+	    {
+	    	result=a*b;
+			*pResult=(float)result;
+			ret=0;
+	    }
+	    return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros y calcula la división
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \return El resultado de la división
+ *
+ */
+int divide(int a, int b, float* pResult)
+{
+	int   ret=-1;
+    float resultado;
+
+    if(b!=0 && pResult!=NULL)
+    {
+    	resultado=(float)a/b;
+    	*pResult=resultado;
+    	ret=0;
+    }
+    return ret;
+}
+
+/** \brief Recibe dos valores numéricos enteros y calcula el factorial
+ *
+ * \param Valor correspondiente a la variable n
+ * \return El resultado del factorial
+ *
+ */
+int factorial(int n, float* pResult)
+{
+	int ret=-1;
+    int result=1;
+    int contador;
+
+    if(n>=0 && pResult!=NULL) //Dominio: numeros mayores o iguales a cero
+    {
+    	if(n<=12) //Evitar overflow, si se modifica el tipo de variable y/o sistema operativo el valor puede aumentar para usar numeros mayores
+    	{
+    		for(contador=1;contador<=n;contador++)
+			{
+				result*=contador;
+			}
+			*pResult=(float)result;
+			ret=0;
+    	}else
+    	{
+    		ret=-2; // Codigo para indicar overflow
+    	}
+
+    }
+
+    return ret;
+}
+
+/*int factorial(int n)
+{
+    int respuesta;
+    if(n==1)
+    {
+        return 1;
+    }else
+    {
+        respuesta=n*factorial(n-1);
+    }
+    return respuesta;
+}*/

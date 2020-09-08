@@ -13,14 +13,21 @@
 
 
 
-
 /* Integers */
 
-int inputInt (int*   pResult, char* inputMessage, char* errorMessage, int   min, int   max, int retrys)
+/** \brief Recibe dos valores numéricos enteros, calcula la suma y devuelve el valor del resultado por referencia
+ *
+ * \param Valor correspondiente a la variable A
+ * \param Valor correspondiente a la variable B
+ * \param Valor correspondiente a la variable pResult
+ * \return Devuelve si hubo error o no
+ *
+ */
+int inputInt(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries)
 {
-	int status = -1;
+	int ret = -1;
 
-	if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retrys>=0)
+	if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
 	{
 		int bufferInt;
 
@@ -31,24 +38,24 @@ int inputInt (int*   pResult, char* inputMessage, char* errorMessage, int   min,
 			if(getInt(&bufferInt)==0 && bufferInt >= min && bufferInt <= max) // Valida que sea un numero y esté dentro de los parametros maximo y minumo
 			{
 				*pResult=bufferInt;
-				status=0;
+				ret=0;
 				break;
 			}else
 			{
-				printf("%s", errorMessage);
-				retrys--;
+				printf("%s\n", errorMessage);
+				retries--;
 			}
-		}while(retrys>=0);
+		}while(retries>=0);
 	}
 
-	return status;
+	return ret;
 }
 
 
-int isNumber (char* cadena)
+int isNumber(char* cadena)
 {
 	int i=0;
-	int retorno = 1;
+	int ret = 1;
 	if (cadena != NULL && strlen (cadena) > 0)
 	{
 		while (cadena[i] != '\0' )
@@ -57,41 +64,41 @@ int isNumber (char* cadena)
 			{
 				if(!(i==0 && cadena[i] == '-' && strlen(cadena) > 1)) //Valida que si en la posicion anterior al numero hay un signo (-) se trata de un numero negativo y no lo descarta
 				{
-					retorno = 0;
+					ret = 0;
 					break ;
 				}
 			}
 			i++;
 		}
 	}
-	return retorno;
+	return ret;
 }
 
 
 
-int getInt (int* pResultado)
+int getInt(int* pResultado)
 {
-	int retorno=-1;
+	int ret=-1;
 	char buffer[64];
 	if (pResultado != NULL)
 	{
 		if (getChar(buffer, sizeof (buffer))==0 && isNumber(buffer))
 		{
 			*pResultado = atoi (buffer);
-			retorno = 0;
+			ret = 0;
 		}
 	}
-	return retorno;
+	return ret;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Floats */
 
-int getFloat (float* pResult, char* inputMessage, char* errorMessage, float min, float max, int retrys)
+int getFloat(float* pResult, char* inputMessage, char* errorMessage, float min, float max, int retries)
 {
-	int status = -1;
+	int ret = -1;
 
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retrys>=0)
+		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
 		{
 			float bufferFloat;
 
@@ -104,17 +111,17 @@ int getFloat (float* pResult, char* inputMessage, char* errorMessage, float min,
 				if(bufferFloat >= min && bufferFloat <= max)
 				{
 					*pResult=bufferFloat;
-					status=0;
+					ret=0;
 					break;
 				}else
 				{
 					printf("%s", errorMessage);
-					retrys--;
+					retries--;
 				}
-			}while(retrys>=0);
+			}while(retries>=0);
 		}
 
-		return status;
+		return ret;
 }
 
 
@@ -122,9 +129,9 @@ int getFloat (float* pResult, char* inputMessage, char* errorMessage, float min,
 /* Chars */
 
 
-int getChar (char* cadena, int longitud)
+int getChar(char* cadena, int longitud)
 {
-	int retorno=-1;
+	int ret=-1;
 	fflush (stdin);
 	if (cadena != NULL && longitud >0 && fgets(cadena,longitud,stdin)==cadena)
 	{
@@ -133,17 +140,17 @@ int getChar (char* cadena, int longitud)
 		{
 			cadena[ strlen (cadena)-1] = '\0' ;
 		}
-	retorno=0;
+	ret=0;
 	}
-	return retorno;
+	return ret;
 }
 
 
-int getCharByNum  (char*  pResult, char* inputMessage, char* errorMessage, char  min, char  max, int retrys)
+int getCharByNum(char* pResult, char* inputMessage, char* errorMessage, char min, char max, int retries)
 {
-	int status = -1;
+	int ret = -1;
 
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retrys>=0)
+		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
 		{
 			char bufferChar;
 
@@ -156,17 +163,17 @@ int getCharByNum  (char*  pResult, char* inputMessage, char* errorMessage, char 
 				if(bufferChar >= min && bufferChar <= max)
 				{
 					*pResult=bufferChar;
-					status=0;
+					ret=0;
 					break;
 				}else
 				{
 					printf("%s", errorMessage);
-					retrys--;
+					retries--;
 				}
-			}while(retrys>=0);
+			}while(retries>=0);
 		}
 
-		return status;
+		return ret;
 }
 
 
@@ -176,11 +183,11 @@ int getCharByNum  (char*  pResult, char* inputMessage, char* errorMessage, char 
 //Both Mayusc and minusc:   b
 //All (with symbols):       A
 
-int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char  typeChar, int retrys)
+int getCharByType(char* pResult, char* inputMessage, char* errorMessage, char typeChar, int retries)
 {
-	int status = -1;
+	int ret = -1;
 
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && (typeChar=='M' || typeChar=='m' || typeChar=='b' || typeChar=='A') && retrys>=0)
+		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && (typeChar=='M' || typeChar=='m' || typeChar=='b' || typeChar=='A') && retries>=0)
 		{
 			char bufferChar;
 
@@ -196,12 +203,12 @@ int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char
 							if(bufferChar>=65 && bufferChar<=90)
 							{
 								*pResult=bufferChar;
-								retrys=-1;
-								status=0;
+								retries=-1;
+								ret=0;
 							}else
 							{
 								printf("%s", errorMessage);
-								retrys--;
+								retries--;
 							}
 							break;
 
@@ -209,12 +216,12 @@ int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char
 							if(bufferChar>=97 && bufferChar<=122)
 							{
 								*pResult=bufferChar;
-								retrys=-1;
-								status=0;
+								retries=-1;
+								ret=0;
 							}else
 							{
 								printf("%s", errorMessage);
-								retrys--;
+								retries--;
 							}
 							break;
 
@@ -222,12 +229,12 @@ int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char
 							if((bufferChar>=65 && bufferChar<=90) || (bufferChar>=97 && bufferChar<=122))
 							{
 								*pResult=bufferChar;
-								retrys=-1;
-								status=0;
+								retries=-1;
+								ret=0;
 							}else
 							{
 								printf("%s", errorMessage);
-								retrys--;
+								retries--;
 							}
 							break;
 
@@ -235,21 +242,21 @@ int getCharByType  (char*  pResult, char* inputMessage, char* errorMessage, char
 							if(bufferChar>=32 && bufferChar<=255)
 							{
 								*pResult=bufferChar;
-								retrys=-1;
-								status=0;
+								retries=-1;
+								ret=0;
 							}else
 							{
 								printf("%s", errorMessage);
-								retrys--;
+								retries--;
 							}
 							break;
 					}
 
-			}while(retrys>=0);
+			}while(retries>=0);
 
 		}
 
-		return status;
+		return ret;
 }
 
 

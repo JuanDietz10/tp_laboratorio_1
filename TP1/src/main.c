@@ -12,7 +12,9 @@ los cuales deberían ir en un archivo aparte para luego llamar a dichas funcione
 #include "operations.h"
 #include "menu.h"
 #include "validations.h"
-#include "strings_eng.h"
+#include "strings_esp.h"
+#include "constants.h"
+
 
 int main()
 {
@@ -20,7 +22,7 @@ int main()
 
     int   valueA;
     int   valueB;
-
+    int   error;
     float result;
     char  confirm;
 
@@ -33,65 +35,123 @@ int main()
     welcome();
     while(!scanf("%c", &confirm));
 
-    while( inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -9999999, 9999999, 10) != 0); // state!=1 valida que se haya ingresado un numero correctamente
+    while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0) // state!=1 valida que se haya ingresado un numero correctamente
+    {
+    	printf("%s\n", MSG_ERROR_INPUT);
+    	while(!scanf("%c", &confirm));
+    }
 
-    while( inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -9999999, 9999999, 10) != 0); // state!=1 valida que se haya ingresado un numero correctamente
+    while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0) // state!=1 valida que se haya ingresado un numero correctamente
+    {
+		printf("%s\n", MSG_ERROR_INPUT);
+		while(!scanf("%c", &confirm));
+	}
+
 
     system("cls");
 
 
-    printf("\n A=%d \t B=%d", valueA, valueB);
 
+    printf("\n A=%d \t B=%d", valueA, valueB);
 
     printf("\n\n%s\n", MSG_CALCULATE);
 	while(!scanf("%c", &confirm));
 
 	system("cls");
 
+
+
 	printf("\n A=%d \t B=%d", valueA, valueB);
 
 	printf("\n----------------------------------------\n");
 
-	result=add(valueA, valueB);
-	printf("\n%s%.0f\n", MSG_PRINT_SUM, result);
 
-	result=subtract(valueA, valueB);
-	printf("\n%s%.0f\n", MSG_PRINT_SUBTRACTION, result);
-
-	result=multiply(valueA, valueB);
-	printf("\n%s%.0f\n", MSG_PRINT_MULTIPLICATION, result);
-
-	if( divide(valueA, valueB, &result) != 0)
+	if((error=add(valueA, valueB, &result)) == 0)
 	{
-		printf("\n%s\n", MSG_ERROR_DIVISION_ZERO);
+		printf("\n%s%.0f\n", MSG_PRINT_SUM, result);
 	}else
+	{
+		if(error == -1)
+		{
+			printf("\n%s\n", MSG_ERROR_GENERAL);
+		}else
+		{
+			printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
+		}
+	}
+
+
+	if(subtract(valueA, valueB, &result) == 0)
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_SUBTRACTION, result);
+	}else
+	{
+		printf("\n%s\n", MSG_ERROR_GENERAL);
+	}
+
+
+	if((error=multiply(valueA, valueB, &result)) == 0)
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_MULTIPLICATION, result);
+	}else
+	{
+		if(error == -1)
+		{
+			printf("\n%s\n", MSG_ERROR_GENERAL);
+		}else
+		{
+			printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
+		}
+	}
+
+
+	if(divide(valueA, valueB, &result) == 0)
 	{
 		printf("\n%s%.2f\n", MSG_PRINT_DIVISION, result);
-	}
-
-	if(valueA<0)
-	{
-		printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
 	}else
 	{
-		result=factorial(valueA);
+		printf("\n%s\n", MSG_ERROR_DIVISION_ZERO);
+	}
+
+
+	if((error=factorial(valueA, &result)) == 0)
+	{
 		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_A, result);
-	}
-
-	if(valueB<0)
-	{
-		printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
 	}else
 	{
-		result=factorial(valueB);
-		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_B, result);
+		if(error == -1)
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+		}else
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+		}
 	}
+
+
+	if((error=factorial(valueB, &result)) == 0)
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_B, result);
+	}else
+	{
+		if(error == -1)
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+		}else
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+		}
+	}
+
+
 
 	printf("\n----------------------------------------\n");
 
 
 	printf("\n%s\n\t", MSG_EXIT_CONFIRM);
     while(!scanf("%c", &confirm));
+
+
 
     system("cls");
 
