@@ -1,5 +1,9 @@
-
-// Prototipos
+/*
+ * operations.h
+ *
+ *  Created on: 8 sep. 2020
+ *      Author: Juan Dietz
+ */
 
 #ifndef OPERATIONS_H
 #define OPERATIONS_H

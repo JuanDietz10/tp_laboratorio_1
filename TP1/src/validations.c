@@ -8,18 +8,20 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-//#include <stdbool.h>
 //#include <stdio_ext.h>
 
 
 
 /* Integers */
 
-/** \brief Recibe dos valores numéricos enteros, calcula la suma y devuelve el valor del resultado por referencia
+/** \brief Valida que el numero recibido este dentro de los parametros maximo y minumo, y lo guarda en pResult
  *
- * \param Valor correspondiente a la variable A
- * \param Valor correspondiente a la variable B
- * \param Valor correspondiente a la variable pResult
+ * \param Valor correspondiente a la direccion de memoria de pResult
+ * \param Valor correspondiente a la direccion de memoria de inputMessage
+ * \param Valor correspondiente a la direccion de memoria de errorMessage
+ * \param Valor correspondiente a la variable min
+ * \param Valor correspondiente a la variable max
+ * \param Valor correspondiente a la variable retries
  * \return Devuelve si hubo error o no
  *
  */
@@ -33,16 +35,16 @@ int inputInt(int* pResult, char* inputMessage, char* errorMessage, int min, int 
 
 		do
 		{
-			printf("%s", inputMessage);
+			puts(inputMessage);
 
-			if(getInt(&bufferInt)==0 && bufferInt >= min && bufferInt <= max) // Valida que sea un numero y esté dentro de los parametros maximo y minumo
+			if(getInt(&bufferInt)==0 && bufferInt >= min && bufferInt <= max) //
 			{
 				*pResult=bufferInt;
 				ret=0;
 				break;
 			}else
 			{
-				printf("%s\n", errorMessage);
+				puts(errorMessage);
 				retries--;
 			}
 		}while(retries>=0);
@@ -51,18 +53,23 @@ int inputInt(int* pResult, char* inputMessage, char* errorMessage, int min, int 
 	return ret;
 }
 
-
-int isNumber(char* cadena)
+/** \brief Valida si se trata e un numero o si es una cadena de caracteres
+ *
+ * \param Valor correspondiente a la direccion de memoria de pString
+ * \return Devuelve si hubo error o no
+ *
+ */
+int isNumber(char* pString)
 {
 	int i=0;
 	int ret = 1;
-	if (cadena != NULL && strlen (cadena) > 0)
+	if (pString != NULL && strlen (pString) > 0)
 	{
-		while (cadena[i] != '\0' )
+		while (pString[i] != '\0' )
 		{
-			if (cadena[i] < '0' || cadena[i] > '9' )
+			if (pString[i] < '0' || pString[i] > '9' )
 			{
-				if(!(i==0 && cadena[i] == '-' && strlen(cadena) > 1)) //Valida que si en la posicion anterior al numero hay un signo (-) se trata de un numero negativo y no lo descarta
+				if(!(i==0 && pString[i] == '-' && strlen(pString) > 1)) //Valida que si en la posicion anterior al numero hay un signo (-) se trata de un numero negativo y no lo descarta como char
 				{
 					ret = 0;
 					break ;
@@ -75,60 +82,37 @@ int isNumber(char* cadena)
 }
 
 
-
-int getInt(int* pResultado)
+/** \brief Valida que si la cadena esta compuesta solo por números, entonces transforma el contenido a int y lo pasa a pResultado
+ *
+ * \param Valor correspondiente a la direccion de memoria de pResult
+ * \return Devuelve si hubo error o no
+ *
+ */
+int getInt(int* pResult)
 {
 	int ret=-1;
 	char buffer[64];
-	if (pResultado != NULL)
+	if (pResult != NULL)
 	{
-		if (getChar(buffer, sizeof (buffer))==0 && isNumber(buffer))
+		if (getChar(buffer, sizeof (buffer))==0 && isNumber(buffer)) // obtiene una cadena y si es un numero la transforma a entero
 		{
-			*pResultado = atoi (buffer);
+			*pResult = atoi (buffer);
 			ret = 0;
 		}
 	}
 	return ret;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------ */
-/* Floats */
-
-int getFloat(float* pResult, char* inputMessage, char* errorMessage, float min, float max, int retries)
-{
-	int ret = -1;
-
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
-		{
-			float bufferFloat;
-
-			do
-			{
-				printf("%s", inputMessage);
-				fflush(stdin);
-				scanf("%f", &bufferFloat);
-
-				if(bufferFloat >= min && bufferFloat <= max)
-				{
-					*pResult=bufferFloat;
-					ret=0;
-					break;
-				}else
-				{
-					printf("%s", errorMessage);
-					retries--;
-				}
-			}while(retries>=0);
-		}
-
-		return ret;
-}
-
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Chars */
 
-
+/** \brief Obtiene una cadena de caracteres y reemplaza el \n por \0
+ *
+ * \param Valor correspondiente a la direccion de memoria de pResult
+ * \return Devuelve si hubo error o no
+ *
+ */
 int getChar(char* cadena, int longitud)
 {
 	int ret=-1;
@@ -144,120 +128,5 @@ int getChar(char* cadena, int longitud)
 	}
 	return ret;
 }
-
-
-int getCharByNum(char* pResult, char* inputMessage, char* errorMessage, char min, char max, int retries)
-{
-	int ret = -1;
-
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
-		{
-			char bufferChar;
-
-			do
-			{
-				printf("%s", inputMessage);
-				fflush(stdin);
-				scanf("%c", &bufferChar);
-
-				if(bufferChar >= min && bufferChar <= max)
-				{
-					*pResult=bufferChar;
-					ret=0;
-					break;
-				}else
-				{
-					printf("%s", errorMessage);
-					retries--;
-				}
-			}while(retries>=0);
-		}
-
-		return ret;
-}
-
-
-//Instructions to validate chars by type (4th argument):
-//Only Mayusc:              M
-//Only Minusc:              m
-//Both Mayusc and minusc:   b
-//All (with symbols):       A
-
-int getCharByType(char* pResult, char* inputMessage, char* errorMessage, char typeChar, int retries)
-{
-	int ret = -1;
-
-		if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && (typeChar=='M' || typeChar=='m' || typeChar=='b' || typeChar=='A') && retries>=0)
-		{
-			char bufferChar;
-
-			do
-			{
-				printf("%s", inputMessage);
-				fflush(stdin);
-				scanf("%c", &bufferChar);
-
-				switch(typeChar)
-					{
-						case 'M':
-							if(bufferChar>=65 && bufferChar<=90)
-							{
-								*pResult=bufferChar;
-								retries=-1;
-								ret=0;
-							}else
-							{
-								printf("%s", errorMessage);
-								retries--;
-							}
-							break;
-
-						case 'm':
-							if(bufferChar>=97 && bufferChar<=122)
-							{
-								*pResult=bufferChar;
-								retries=-1;
-								ret=0;
-							}else
-							{
-								printf("%s", errorMessage);
-								retries--;
-							}
-							break;
-
-						case 'b':
-							if((bufferChar>=65 && bufferChar<=90) || (bufferChar>=97 && bufferChar<=122))
-							{
-								*pResult=bufferChar;
-								retries=-1;
-								ret=0;
-							}else
-							{
-								printf("%s", errorMessage);
-								retries--;
-							}
-							break;
-
-						case 'A':
-							if(bufferChar>=32 && bufferChar<=255)
-							{
-								*pResult=bufferChar;
-								retries=-1;
-								ret=0;
-							}else
-							{
-								printf("%s", errorMessage);
-								retries--;
-							}
-							break;
-					}
-
-			}while(retries>=0);
-
-		}
-
-		return ret;
-}
-
 
 

@@ -1,5 +1,12 @@
 /*
-En este archivo se definen las cadenas que se usan para dan un mensaje al usuario, y no tienen ningún uso en la lógica del programa
+ * string_eng.h
+ *
+ *  Created on: 8 sep. 2020
+ *      Author: Juan Dietz
+ */
+
+/*
+En este archivo se definen las cadenas que se usan para dan un mensaje al usuario, y no tienen ningun uso en la logica del programa
 */
 
 #ifndef STRINGS_ENG_H
@@ -7,7 +14,7 @@ En este archivo se definen las cadenas que se usan para dan un mensaje al usuari
 
 #define MSG_INPUT_VALUE_A        " Set A (Domain: Integer)"
 #define MSG_INPUT_VALUE_B        " Set B (Domain: Integer)"
-#define MSG_ERROR_INPUT          " You has used all of your attempts to set a number, do you want to try again?    Yes (Enter)"
+#define MSG_ERROR_RETRY          " You has used all of your attempts to set a number, do you want to try again?    Yes (Enter)"
 #define MSG_INVALID_CHAR_INPUT   " Invalid character"
 #define MSG_ERROR_DIVISION_ZERO  " Cannot be divided by zero"
 #define MSG_ERROR_FACT_NEGATIVE  "  Cannot calculate negative number factorial"

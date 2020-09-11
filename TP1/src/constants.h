@@ -2,7 +2,7 @@
  * constants.h
  *
  *  Created on: 8 sep. 2020
- *      Author: John
+ *      Author: Juan Dietz
  */
 
 #ifndef CONSTANTS_H_

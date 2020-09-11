@@ -1,18 +1,17 @@
 
 /*
-En el archivo principal o main, se ubica la lÃ³gica del programa, sin incluir funciones o cadenas de caracteres,
-los cuales deberÃ­an ir en un archivo aparte para luego llamar a dichas funciones cuando sea necesario utilizarlas.
+En el archivo principal o main, se ubica la logica del programa, sin incluir funciones o cadenas de caracteres,
+los cuales deberan ir en un archivo aparte para luego llamar a dichas funciones cuando sea necesario utilizarlas.
 */
 
 #include <stdio.h>
 //#include <stdio ext.h>
 #include <stdlib.h>
-//#include <stdbool.h>
-//#include <conio.h>
 #include "operations.h"
 #include "menu.h"
 #include "validations.h"
 #include "strings_esp.h"
+//#include "strings_eng.h"
 #include "constants.h"
 
 
@@ -26,7 +25,7 @@ int main()
     float result;
     char  confirm;
 
-    //IMPORTANTE: En Linux en lugar de fflush() se debe utilizar la función __fpurge(), para lo cual es necesario incluir el archivo stdio_ext.h
+    //IMPORTANTE: En Linux en lugar de fflush() se debe utilizar la función __fpurge()
 
 
     system("cls"); //Limpiar pantalla. system("clear"); para Linux
@@ -34,16 +33,17 @@ int main()
 
     welcome();
     while(!scanf("%c", &confirm));
+    system("cls");
 
-    while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0) // state!=1 valida que se haya ingresado un numero correctamente
+    while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
     {
-    	printf("%s\n", MSG_ERROR_INPUT);
+    	puts(MSG_ERROR_RETRY);
     	while(!scanf("%c", &confirm));
     }
 
-    while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0) // state!=1 valida que se haya ingresado un numero correctamente
+    while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
     {
-		printf("%s\n", MSG_ERROR_INPUT);
+		puts(MSG_ERROR_RETRY);
 		while(!scanf("%c", &confirm));
 	}
 
@@ -66,34 +66,25 @@ int main()
 	printf("\n----------------------------------------\n");
 
 
-	if((error=add(valueA, valueB, &result)) == 0)
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_SUM, result);
-	}else
-	{
-		if(error == -1)
-		{
-			printf("\n%s\n", MSG_ERROR_GENERAL);
-		}else
-		{
-			printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
-		}
-	}
-
-
-	if(subtract(valueA, valueB, &result) == 0)
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_SUBTRACTION, result);
-	}else
+	if(add(valueA, valueB, &result))
 	{
 		printf("\n%s\n", MSG_ERROR_GENERAL);
+	}else
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_SUM, result);
 	}
 
 
-	if((error=multiply(valueA, valueB, &result)) == 0)
+	if(subtract(valueA, valueB, &result))
 	{
-		printf("\n%s%.0f\n", MSG_PRINT_MULTIPLICATION, result);
+		printf("\n%s\n", MSG_ERROR_GENERAL);
 	}else
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_SUBTRACTION, result);
+	}
+
+
+	if((error=multiply(valueA, valueB, &result)))
 	{
 		if(error == -1)
 		{
@@ -102,46 +93,49 @@ int main()
 		{
 			printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
 		}
+	}else
+	{
+		printf("\n%s%.0f\n", MSG_PRINT_MULTIPLICATION, result);
 	}
 
 
-	if(divide(valueA, valueB, &result) == 0)
-	{
-		printf("\n%s%.2f\n", MSG_PRINT_DIVISION, result);
-	}else
+	if(divide(valueA, valueB, &result))
 	{
 		printf("\n%s\n", MSG_ERROR_DIVISION_ZERO);
+	}else
+	{
+		printf("\n%s%.4f\n", MSG_PRINT_DIVISION, result);
 	}
 
 
-	if((error=factorial(valueA, &result)) == 0)
+	if((error=factorial(valueA, &result)))
+	{
+		if(error == -1)
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+		}else
+		{
+			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+		}
+	}else
 	{
 		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_A, result);
-	}else
-	{
-		if(error == -1)
-		{
-			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
-		}else
-		{
-			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
-		}
 	}
 
 
-	if((error=factorial(valueB, &result)) == 0)
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_B, result);
-	}else
-	{
-		if(error == -1)
+	if((error=factorial(valueB, &result)))
 		{
-			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+			if(error == -1)
+			{
+				printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+			}else
+			{
+				printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+			}
 		}else
 		{
-			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+			printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_B, result);
 		}
-	}
 
 
 
@@ -155,7 +149,7 @@ int main()
 
     system("cls");
 
-    printf("%s\n", MSG_GOODBYE);
+    puts(MSG_GOODBYE);
 
     return 0;
 }

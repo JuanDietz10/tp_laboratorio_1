@@ -20,15 +20,10 @@ int add(int a, int b, float* pResult)
 
     if(pResult!=NULL)
     {
-    	if(abs(b)<=2147483647-abs(a)) //evitar overflow en una variable tipo int.
-		{
-			sum=a+b;
-			*pResult=(float)sum;
-			ret=0;
-		}else
-		{
-			ret=-2; //overflow
-		}
+		sum=a+b;
+		*pResult=(float)sum;
+		ret=0;
+
     }
     return ret;
 }

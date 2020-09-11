@@ -84,3 +84,153 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
 gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+06:56:44 **** Rebuild of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+06:58:04 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+06:58:42 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+07:11:24 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+07:11:38 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+07:25:36 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+07:33:28 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+07:38:00 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+07:45:05 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+07:45:49 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+08:12:16 **** Rebuild of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+08:23:08 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+08:25:37 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:25:42 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+08:25:45 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+08:27:15 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:86:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   86 |  if(error=multiply(valueA, valueB, &result))
+      |     ^~~~~
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+08:27:34 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+08:28:11 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
+08:32:30 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+08:35:37 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+08:36:02 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+08:37:38 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+08:39:57 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+08:41:38 **** Incremental Build of configuration Debug for project TP1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
+Info: Nothing to build for TP1
+Info: Nothing to build for TP1
