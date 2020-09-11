@@ -5,10 +5,10 @@
 
 void welcome(void)
 {
-    printf("\n-----------------------------------------\n");
-    printf("%s\n"  , MSG_WELCOME);
-    printf("-----------------------------------------\n\n");
-    printf("\n%s\n", MSG_SET_VALUES);
+	printf("\n-----------------------------------------\n");
+	printf("%s\n"  , MSG_WELCOME);
+	printf("-----------------------------------------\n\n");
+	printf("\n%s\n", MSG_SET_VALUES);
 
-    return;
+	return;
 }

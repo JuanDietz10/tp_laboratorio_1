@@ -19,46 +19,46 @@ int main()
 {
 	setbuf(stdout, NULL);
 
-	int   valueA;
-	int   valueB;
-	int   error;
-	float result;
-	char  confirm;
+    int   valueA;
+    int   valueB;
+    int   error;
+    float result;
+    char  confirm;
 
     //IMPORTANTE: En Linux en lugar de fflush() se debe utilizar la función __fpurge()
 
 
-	system("cls"); //Limpiar pantalla. system("clear"); para Linux
+    system("cls"); //Limpiar pantalla. system("clear"); para Linux
 
 
-	welcome();
-	while(!scanf("%c", &confirm));
-	system("cls");
+    welcome();
+    while(!scanf("%c", &confirm));
+    system("cls");
 
-	while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
-	{
+    while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
+    {
+    	puts(MSG_ERROR_RETRY);
+    	while(!scanf("%c", &confirm));
+    }
+
+    while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
+    {
 		puts(MSG_ERROR_RETRY);
 		while(!scanf("%c", &confirm));
 	}
 
-	while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
-	{
-		puts(MSG_ERROR_RETRY);
-		while(!scanf("%c", &confirm));
-	}
 
-
-	system("cls");
+    system("cls");
 
 
 
-	printf("\n A=%d \t B=%d", valueA, valueB);
+    printf("\n A=%d \t B=%d", valueA, valueB);
 
-	printf("\n\n%s\n", MSG_CALCULATE);
-
+    printf("\n\n%s\n", MSG_CALCULATE);
 	while(!scanf("%c", &confirm));
 
 	system("cls");
+
 
 
 	printf("\n A=%d \t B=%d", valueA, valueB);
@@ -143,13 +143,13 @@ int main()
 
 
 	printf("\n%s\n\t", MSG_EXIT_CONFIRM);
-	while(!scanf("%c", &confirm));
+    while(!scanf("%c", &confirm));
 
 
 
-	system("cls");
+    system("cls");
 
-	puts(MSG_GOODBYE);
+    puts(MSG_GOODBYE);
 
-	return 0;
+    return 0;
 }
