@@ -13,7 +13,7 @@
  * \return Devuelve si hubo error o no
  *
  */
-int add(int a, int b, float* pResult)
+int add(int a, int b, int* pResult)
 {
 	int ret = -1;
 	int sum;
@@ -21,7 +21,7 @@ int add(int a, int b, float* pResult)
 	if(pResult!=NULL)
 	{
 		sum=a+b;
-		*pResult=(float)sum;
+		*pResult=sum;
 		ret=0;
 	}
 	return ret;
@@ -35,7 +35,7 @@ int add(int a, int b, float* pResult)
  * \return Devuelve si hubo error o no
  *
  */
-int subtract(int a, int b, float* pResult)
+int subtract(int a, int b, int* pResult)
 {
 	int ret = -1;
 	int subtraction;
@@ -43,7 +43,7 @@ int subtract(int a, int b, float* pResult)
 	if(pResult!=NULL)
 	{
 		subtraction=a-b;
-		*pResult=(float)subtraction;
+		*pResult=subtraction;
 		ret=0;
 	}
 	return ret;
@@ -57,22 +57,32 @@ int subtract(int a, int b, float* pResult)
  * \return Devuelve si hubo error o no
  *
  */
-int multiply(int a, int b, float* pResult)
+int multiply(int a, int b, int* pResult)
 {
 	int ret = -1;
 	int mult;
 
 	if(pResult!=NULL)
 	{
-		if(abs(b)<=2147483647/abs(a)) //evitar overflow en una variable tipo int.
+		if(a==0 || b==0)
 		{
 			mult=a*b;
-			*pResult=(float)mult;
+			*pResult=mult;
 			ret=0;
 		}else
 		{
-			ret=-2; //overflow
+			if(a!=0 && abs(b)<=2147483647/abs(a)) //evitar overflow en una variable tipo int.
+			{
+				mult=a*b;
+				*pResult=mult;
+				ret=0;
+			}else
+			{
+				ret=-2; //overflow
+			}
 		}
+
+
 
 	}
 	return ret;
@@ -107,7 +117,7 @@ int divide(int a, int b, float* pResult)
  * \return Devuelve si hubo error y el tipo de error
  *
  */
-int factorial(int n, float* pResult)
+int factorial(int n, int* pResult)
 {
 	int ret=-1;
 	int result=1;
@@ -121,7 +131,7 @@ int factorial(int n, float* pResult)
 			{
 				result*=count;
 			}
-			*pResult=(float)result;
+			*pResult=result;
 			ret=0;
 		}else
 		{

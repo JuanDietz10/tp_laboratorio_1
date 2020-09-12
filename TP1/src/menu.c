@@ -3,12 +3,13 @@
 #include "strings_esp.h"
 //#include "strings_eng.h"
 
-void welcome(void)
+void menu(int* a, int* b)
 {
-	printf("\n-----------------------------------------\n");
-	printf("%s\n"  , MSG_WELCOME);
-	printf("-----------------------------------------\n\n");
-	printf("\n%s\n", MSG_SET_VALUES);
+	printf("\n1. Ingresar 1er operando (A=%d)", *a);
+	printf("\n2. Ingresar 2do operando (B=%d)", *b);
+	printf("\n3. Calcular todas las operaciones");
+	printf("\n4. Informar resultados");
+	printf("\n5. Salir\n");
 
 	return;
 }

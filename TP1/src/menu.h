@@ -8,6 +8,6 @@
 #ifndef INOUT_H
 #define INOUT_H
 
-void welcome(void);
+void menu(int* a, int* b);
 
 #endif

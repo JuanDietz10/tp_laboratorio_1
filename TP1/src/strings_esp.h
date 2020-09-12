@@ -15,6 +15,7 @@ En este archivo se definen las cadenas que se usan para dan un mensaje al usuari
 
 #define MSG_INPUT_VALUE_A        " Ingrese el valor de A (Dominio: Enteros)"
 #define MSG_INPUT_VALUE_B        " Ingrese el valor de B (Dominio: Enteros)"
+#define MSG_INPUT_OPTION         " Ingrese la opcion "
 #define MSG_ERROR_RETRY          " Se han utilizado lodos los intentos para ingresar un número, desea intentarlo nuevamente?   Si (Enter)"
 #define MSG_INVALID_CHAR_INPUT   " Caracter inválido"
 #define MSG_ERROR_DIVISION_ZERO  " Imposible dividir por Cero"
@@ -24,8 +25,6 @@ En este archivo se definen las cadenas que se usan para dan un mensaje al usuari
 #define MSG_ERROR_MULT_OVERFLOW  "  No se puede multiplicar, limite de valores sobrepasado"
 #define MSG_WELCOME              " ¡Bienvenido!"
 #define MSG_GOODBYE              " Gracias, vuelva prontos."
-#define MSG_EXIT_CONFIRM         " Salir?	  Si (Enter)"
-#define MSG_CALCULATE            " Datos cargados exitosamente!   Realizar todas las operaciones?       Si (Enter)"
 #define MSG_SET_VALUES           "  Cargar datos?       Si (enter)"
 #define MSG_PRINT_SUM            "  El resultado de A+B es: "
 #define MSG_PRINT_SUBTRACTION    "  El resultado de A-B es: "

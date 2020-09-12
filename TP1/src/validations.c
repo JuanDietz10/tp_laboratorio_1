@@ -53,6 +53,10 @@ int inputInt(int* pResult, char* inputMessage, char* errorMessage, int min, int 
 	return ret;
 }
 
+
+
+
+
 /** \brief Valida si se trata e un numero o si es una cadena de caracteres
  *
  * \param Valor correspondiente a la direccion de memoria de pString

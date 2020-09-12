@@ -2,7 +2,7 @@
  * validations.h
  *
  *  Created on: 29 ago. 2020
- *      Author: John
+ *      Author: Juan Dietz
  */
 
 #ifndef VALIDATIONS_H_

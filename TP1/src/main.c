@@ -19,11 +19,25 @@ int main()
 {
 	setbuf(stdout, NULL);
 
-	int   valueA;
-	int   valueB;
-	int   error;
-	float result;
-	char  confirm;
+	int   valueA = 0;
+	int   valueB = 0;
+
+	int   stateAdd = 0;
+	int   stateSubt = 0;
+	int   stateDiv = 1;
+	int   stateMult = 0;
+	int   stateFactA = 0;
+	int   stateFactB = 0;
+
+	int   exit;
+	int   input;
+
+	int   resultSum = 0;
+	int   resultSubt = 0;
+	int   resultMult = 0;
+	float resultDiv = 0;
+	int   resultFactA = 1;
+	int   resultFactB = 1;
 
     //IMPORTANTE: En Linux en lugar de fflush() se debe utilizar la función __fpurge()
 
@@ -31,123 +45,118 @@ int main()
 	system("cls"); //Limpiar pantalla. system("clear"); para Linux
 
 
-	welcome();
-	while(!scanf("%c", &confirm));
-	system("cls");
+	printf("\n-----------------------------------------\n");
+	printf("%s\n"  , MSG_WELCOME);
+	printf("-----------------------------------------\n\n");
 
-	while(inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
+	do
 	{
-		puts(MSG_ERROR_RETRY);
-		while(!scanf("%c", &confirm));
-	}
+		exit=0;
 
-	while(inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES) != 0)
-	{
-		puts(MSG_ERROR_RETRY);
-		while(!scanf("%c", &confirm));
-	}
+		menu(&valueA, &valueB);
 
+		inputInt(&input, MSG_INPUT_OPTION, MSG_INVALID_CHAR_INPUT, 1, 5, RETRIES);
 
-	system("cls");
+		system("cls");
 
-
-
-	printf("\n A=%d \t B=%d", valueA, valueB);
-
-	printf("\n\n%s\n", MSG_CALCULATE);
-
-	while(!scanf("%c", &confirm));
-
-	system("cls");
-
-
-	printf("\n A=%d \t B=%d", valueA, valueB);
-
-	printf("\n----------------------------------------\n");
-
-
-	if(add(valueA, valueB, &result))
-	{
-		printf("\n%s\n", MSG_ERROR_GENERAL);
-	}else
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_SUM, result);
-	}
-
-
-	if(subtract(valueA, valueB, &result))
-	{
-		printf("\n%s\n", MSG_ERROR_GENERAL);
-	}else
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_SUBTRACTION, result);
-	}
-
-
-	if((error=multiply(valueA, valueB, &result)))
-	{
-		if(error == -1)
+		switch(input)
 		{
-			printf("\n%s\n", MSG_ERROR_GENERAL);
-		}else
-		{
-			printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
+			case 1:
+				inputInt(&valueA, MSG_INPUT_VALUE_A, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES);
+				break;
+
+			case 2:
+				inputInt(&valueB, MSG_INPUT_VALUE_B, MSG_INVALID_CHAR_INPUT, -DOMAIN, DOMAIN, RETRIES);
+				break;
+
+			case 3:
+				stateAdd=add(valueA, valueB, &resultSum);
+				stateSubt=subtract(valueA, valueB, &resultSubt);
+				stateMult=multiply(valueA, valueB, &resultMult);
+				stateDiv=divide(valueA, valueB, &resultDiv);
+				stateFactA=factorial(valueA, &resultFactA);
+				stateFactB=factorial(valueB, &resultFactB);
+				break;
+
+			case 4:
+				if(stateAdd)
+				{
+					printf("\n%s\n", MSG_ERROR_GENERAL);
+				}else
+				{
+					printf("\n%s%d\n", MSG_PRINT_SUM, resultSum);
+				}
+
+
+				if(stateSubt)
+				{
+					printf("\n%s\n", MSG_ERROR_GENERAL);
+				}else
+				{
+					printf("\n%s%d\n", MSG_PRINT_SUBTRACTION, resultSubt);
+				}
+
+
+				if(stateMult)
+				{
+					if(stateMult == -1)
+					{
+						printf("\n%s\n", MSG_ERROR_GENERAL);
+					}else
+					{
+						printf("\n%s\n", MSG_ERROR_MULT_OVERFLOW);
+					}
+				}else
+				{
+					printf("\n%s%d\n", MSG_PRINT_MULTIPLICATION, resultMult);
+				}
+
+
+				if(stateDiv)
+				{
+					printf("\n%s\n", MSG_ERROR_DIVISION_ZERO);
+				}else
+				{
+					printf("\n%s%.4f\n", MSG_PRINT_DIVISION, resultDiv);
+				}
+
+
+				if(stateFactA)
+				{
+					if(stateFactA == -1)
+					{
+						printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+					}else
+					{
+						printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+					}
+				}else
+				{
+					printf("\n%s%d\n", MSG_PRINT_FACTORIAL_A, resultFactA);
+				}
+
+
+				if(stateFactB)
+					{
+						if(stateFactB == -1)
+						{
+							printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
+						}else
+						{
+							printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
+						}
+					}else
+					{
+						printf("\n%s%d\n", MSG_PRINT_FACTORIAL_B, resultFactB);
+					}
+				break;
+
+			case 5:
+				exit=1;
+				break;
+
 		}
-	}else
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_MULTIPLICATION, result);
-	}
-
-
-	if(divide(valueA, valueB, &result))
-	{
-		printf("\n%s\n", MSG_ERROR_DIVISION_ZERO);
-	}else
-	{
-		printf("\n%s%.4f\n", MSG_PRINT_DIVISION, result);
-	}
-
-
-	if((error=factorial(valueA, &result)))
-	{
-		if(error == -1)
-		{
-			printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
-		}else
-		{
-			printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
-		}
-	}else
-	{
-		printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_A, result);
-	}
-
-
-	if((error=factorial(valueB, &result)))
-		{
-			if(error == -1)
-			{
-				printf("\n%s\n", MSG_ERROR_FACT_NEGATIVE);
-			}else
-			{
-				printf("\n%s\n", MSG_ERROR_FACT_OVERFLOW);
-			}
-		}else
-		{
-			printf("\n%s%.0f\n", MSG_PRINT_FACTORIAL_B, result);
-		}
-
-
-
-	printf("\n----------------------------------------\n");
-
-
-	printf("\n%s\n\t", MSG_EXIT_CONFIRM);
-	while(!scanf("%c", &confirm));
-
-
-
-	system("cls");
+	}while(!exit);
 
 	puts(MSG_GOODBYE);
 
