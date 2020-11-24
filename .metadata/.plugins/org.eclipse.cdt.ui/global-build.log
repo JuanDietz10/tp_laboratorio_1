@@ -1,674 +1,220 @@
-08:09:11 **** Incremental Build of configuration Debug for project TP1 ****
+22:52:04 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:22:11 **** Incremental Build of configuration Debug for project TP1 ****
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+22:54:08 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:41:27 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-..\src\operations.c: In function 'multiply':
-..\src\operations.c:65:10: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
-   65 |       if(abs(b)<=2147483647/a) //evitar overflow en una variable tipo int
-      |          ^~~
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:44:17 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-08:55:18 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:91:5: warning: 'error' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   91 |   if(error == -1)
-      |     ^
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:56:17 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-08:59:50 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-09:16:52 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-..\src\operations.c: In function 'multiply':
-..\src\operations.c:66:10: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
-   66 |       if(abs(b)<=2147483647/abs(a)) //evitar overflow en una variable tipo int. (b*b)/b se usa para encontrar el valor absoluto de b sin usar otras librerias
-      |          ^~~
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-09:17:46 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-09:18:03 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-10:26:08 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:73:5: warning: 'error' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   73 |   if(error == -1)
-      |     ^
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-10:26:32 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-14:02:02 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-06:56:44 **** Rebuild of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-06:58:04 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-06:58:42 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-07:11:24 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-07:11:38 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-07:25:36 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-07:33:28 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-07:38:00 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-07:45:05 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-07:45:49 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-08:12:16 **** Rebuild of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:23:08 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-08:25:37 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-08:25:42 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP1.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-08:25:45 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:27:15 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:86:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-   86 |  if(error=multiply(valueA, valueB, &result))
-      |     ^~~~~
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:27:34 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:28:11 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-08:32:30 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:35:37 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-08:36:02 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:37:38 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:39:57 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-08:41:38 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-09:05:38 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:08:55 **** Incremental Build of configuration Debug for project TP1 ****
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:01:21 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
 ..\src\validations.c: In function 'inputChar':
-..\src\validations.c:69:15: warning: passing argument 1 of 'getChar' makes pointer from integer without a cast [-Wint-conversion]
-   69 |    if(getChar(buffer, sizeof (buffer))==0 && buffer >= min && buffer <= max) //
-      |               ^~~~~~
-      |               |
-      |               int
-In file included from ..\src\validations.c:7:
-..\src\validations.h:13:21: note: expected 'char *' but argument is of type 'int'
-   13 | int getChar  (char* cadena,  int   longitud);
-      |               ~~~~~~^~~~~~
-..\src\validations.c:69:7: warning: 'buffer' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   69 |    if(getChar(buffer, sizeof (buffer))==0 && buffer >= min && buffer <= max) //
-      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:57:13: warning: passing argument 1 of 'inputChar' from incompatible pointer type [-Wincompatible-pointer-types]
-   57 |   inputChar(option, MSG_INPUT_OPTION, MSG_INVALID_CHAR_INPUT, 1, 5, RETRIES);
-      |             ^~~~~~
-      |             |
-      |             char *
-In file included from ..\src\main.c:12:
-..\src\validations.h:12:20: note: expected 'int *' but argument is of type 'char *'
-   12 | int inputChar(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries);
-      |               ~~~~~^~~~~~~
-..\src\main.c:29:8: warning: variable 'stateFactB' set but not used [-Wunused-but-set-variable]
-   29 |  int   stateFactB;
-      |        ^~~~~~~~~~
-..\src\main.c:59:3: warning: 'input' is used uninitialized in this function [-Wuninitialized]
-   59 |   switch(input)
-      |   ^~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-..\src\menu.c: In function 'menu':
-..\src\menu.c:8:39: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    8 |  printf("1. Ingresar 1er operando (A=%d)", a);
-      |                                      ~^    ~
-      |                                       |    |
-      |                                       int  int *
-      |                                      %n
-..\src\menu.c:9:39: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    9 |  printf("2. Ingresar 2do operando (B=%d)", b);
-      |                                      ~^    ~
-      |                                       |    |
-      |                                       int  int *
-      |                                      %n
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-18:10:01 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:57:13: warning: passing argument 1 of 'inputChar' from incompatible pointer type [-Wincompatible-pointer-types]
-   57 |   inputChar(option, MSG_INPUT_OPTION, MSG_INVALID_CHAR_INPUT, 1, 5, RETRIES);
-      |             ^~~~~~
-      |             |
-      |             char *
-In file included from ..\src\main.c:12:
-..\src\validations.h:12:20: note: expected 'int *' but argument is of type 'char *'
-   12 | int inputChar(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries);
-      |               ~~~~~^~~~~~~
-..\src\main.c:59:10: error: switch quantity not an integer
-   59 |   switch(option)
-      |          ^~~~~~
-..\src\main.c:31:8: warning: unused variable 'input' [-Wunused-variable]
-   31 |  int   input;
-      |        ^~~~~
-..\src\main.c:29:8: warning: variable 'stateFactB' set but not used [-Wunused-but-set-variable]
-   29 |  int   stateFactB;
-      |        ^~~~~~~~~~
-18:10:23 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:57:13: warning: passing argument 1 of 'inputChar' from incompatible pointer type [-Wincompatible-pointer-types]
-   57 |   inputChar(option, MSG_INPUT_OPTION, MSG_INVALID_CHAR_INPUT, 1, 5, RETRIES);
-      |             ^~~~~~
-      |             |
-      |             char *
-In file included from ..\src\main.c:12:
-..\src\validations.h:12:20: note: expected 'int *' but argument is of type 'char *'
-   12 | int inputChar(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries);
-      |               ~~~~~^~~~~~~
-..\src\main.c:59:10: error: switch quantity not an integer
-   59 |   switch(option)
-      |          ^~~~~~
-..\src\main.c:31:8: warning: unused variable 'input' [-Wunused-variable]
-   31 |  int   input;
-      |        ^~~~~
-18:11:17 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:57:13: warning: passing argument 1 of 'inputChar' from incompatible pointer type [-Wincompatible-pointer-types]
-   57 |   inputChar(option, MSG_INPUT_OPTION, MSG_INVALID_CHAR_INPUT, 1, 5, RETRIES);
-      |             ^~~~~~
-      |             |
-      |             char *
-In file included from ..\src\main.c:12:
-..\src\validations.h:12:20: note: expected 'int *' but argument is of type 'char *'
-   12 | int inputChar(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries);
-      |               ~~~~~^~~~~~~
-..\src\main.c:59:10: error: switch quantity not an integer
-   59 |   switch(option)
-      |          ^~~~~~
-..\src\main.c:31:8: warning: unused variable 'input' [-Wunused-variable]
-   31 |  int   input;
-      |        ^~~~~
-18:12:38 **** Incremental Build of configuration Debug for project TP1 ****
+..\src\validations.c:62:34: warning: comparison between pointer and integer
+   62 |  if(pResult!=NULL && inputMessage!=NULL && errorMessage!=NULL && min<=max && retries>=0)
+      |                                  ^~
+..\src\validations.c:68:15: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   68 |    printf("\t%s\n", inputMessage);
+      |              ~^     ~~~~~~~~~~~~
+      |               |     |
+      |               |     int
+      |               char *
+      |              %d
+..\src\validations.c:72:12: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   72 |     strcpy(*pResult, bufferChar);
+      |            ^~~~~~~~
+      |            |
+      |            char
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:79:40: note: expected 'char *' but argument is of type 'char'
+   79 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strcpy (char *, const char *);
+      |                                        ^~~~~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:01:59 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-..\src\validations.c:57:5: error: conflicting types for 'inputChar'
-   57 | int inputChar(char* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries)
-      |     ^~~~~~~~~
-In file included from ..\src\validations.c:7:
-..\src\validations.h:12:5: note: previous declaration of 'inputChar' was here
-   12 | int inputChar(int* pResult, char* inputMessage, char* errorMessage, int min, int max, int retries);
-      |     ^~~~~~~~~
 ..\src\validations.c: In function 'inputChar':
-..\src\validations.c:69:15: warning: passing argument 1 of 'getChar' makes pointer from integer without a cast [-Wint-conversion]
-   69 |    if(getChar(buffer, sizeof (buffer))==0 && buffer >= min && buffer <= max) //
-      |               ^~~~~~
-      |               |
-      |               int
+..\src\validations.c:72:12: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   72 |     strcpy(*pResult, bufferChar);
+      |            ^~~~~~~~
+      |            |
+      |            char
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:79:40: note: expected 'char *' but argument is of type 'char'
+   79 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strcpy (char *, const char *);
+      |                                        ^~~~~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:02:09 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:08:30 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c: In function 'inputChar':
+..\src\validations.c:70:46: warning: comparison between pointer and integer
+   70 |    if(getChar(bufferChar, LEN) && bufferChar < 122 && bufferChar > 65) //
+      |                                              ^
+..\src\validations.c:70:66: warning: comparison between pointer and integer
+   70 |    if(getChar(bufferChar, LEN) && bufferChar < 122 && bufferChar > 65) //
+      |                                                                  ^
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:10:51 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c: In function 'inputChar':
+..\src\validations.c:70:56: warning: passing argument 2 of 'stricmp' makes pointer from integer without a cast [-Wint-conversion]
+   70 |    if(getChar(bufferChar, LEN) && (stricmp(bufferChar, min)) > 0 && (stricmp(bufferChar, max)) < 0) //
+      |                                                        ^~~
+      |                                                        |
+      |                                                        int
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:138:61: note: expected 'const char *' but argument is of type 'int'
+  138 | _CRTIMP __cdecl __MINGW_NOTHROW  int stricmp (const char *, const char *);
+      |                                                             ^~~~~~~~~~~~
+..\src\validations.c:70:90: warning: passing argument 2 of 'stricmp' makes pointer from integer without a cast [-Wint-conversion]
+   70 |    if(getChar(bufferChar, LEN) && (stricmp(bufferChar, min)) > 0 && (stricmp(bufferChar, max)) < 0) //
+      |                                                                                          ^~~
+      |                                                                                          |
+      |                                                                                          int
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:138:61: note: expected 'const char *' but argument is of type 'int'
+  138 | _CRTIMP __cdecl __MINGW_NOTHROW  int stricmp (const char *, const char *);
+      |                                                             ^~~~~~~~~~~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:11:20 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c: In function 'inputChar':
+..\src\validations.c:70:56: warning: passing argument 2 of 'stricmp' makes pointer from integer without a cast [-Wint-conversion]
+   70 |    if(getChar(bufferChar, LEN) && (stricmp(bufferChar, min)) > 0 && (stricmp(bufferChar, max)) < 0) //
+      |                                                        ^~~
+      |                                                        |
+      |                                                        char
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:138:61: note: expected 'const char *' but argument is of type 'char'
+  138 | _CRTIMP __cdecl __MINGW_NOTHROW  int stricmp (const char *, const char *);
+      |                                                             ^~~~~~~~~~~~
+..\src\validations.c:70:90: warning: passing argument 2 of 'stricmp' makes pointer from integer without a cast [-Wint-conversion]
+   70 |    if(getChar(bufferChar, LEN) && (stricmp(bufferChar, min)) > 0 && (stricmp(bufferChar, max)) < 0) //
+      |                                                                                          ^~~
+      |                                                                                          |
+      |                                                                                          char
+In file included from ..\src\validations.c:10:
+c:\mingw\include\string.h:138:61: note: expected 'const char *' but argument is of type 'char'
+  138 | _CRTIMP __cdecl __MINGW_NOTHROW  int stricmp (const char *, const char *);
+      |                                                             ^~~~~~~~~~~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:11:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:12:51 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:15:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+..\src\arrayemployees.c: In function 'addEmployee':
+..\src\arrayemployees.c:227:61: warning: passing argument 5 of 'inputName' makes pointer from integer without a cast [-Wint-conversion]
+  227 |         inputName(name, len, MSG_INPUT_NAME, MSG_ERROR_ADD, 65, 122, RETRIES);
+      |                                                             ^~
+      |                                                             |
+      |                                                             int
+In file included from ..\src\arrayemployees.c:14:
+..\src\validations.h:15:85: note: expected 'char *' but argument is of type 'int'
+   15 | int inputName(char* pResult, int len, char* inputMessage, char* errorMessage, char* min, char* max, int retries);
+      |                                                                               ~~~~~~^~~
+..\src\arrayemployees.c:227:65: warning: passing argument 6 of 'inputName' makes pointer from integer without a cast [-Wint-conversion]
+  227 |         inputName(name, len, MSG_INPUT_NAME, MSG_ERROR_ADD, 65, 122, RETRIES);
+      |                                                                 ^~~
+      |                                                                 |
+      |                                                                 int
+In file included from ..\src\arrayemployees.c:14:
+..\src\validations.h:15:96: note: expected 'char *' but argument is of type 'int'
+   15 | int inputName(char* pResult, int len, char* inputMessage, char* errorMessage, char* min, char* max, int retries);
+      |                                                                                          ~~~~~~^~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:18:09 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c: In function 'inputName':
+..\src\validations.c:72:12: error: 'pResult' undeclared (first use in this function)
+   72 |     strcpy(pResult, bufferChar);
+      |            ^~~~~~~
+..\src\validations.c:72:12: note: each undeclared identifier is reported only once for each function it appears in
+23:18:18 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+..\src\arrayemployees.c: In function 'addEmployee':
+..\src\arrayemployees.c:227:61: warning: passing argument 5 of 'inputName' makes pointer from integer without a cast [-Wint-conversion]
+  227 |         inputName(name, len, MSG_INPUT_NAME, MSG_ERROR_ADD, 65, 122, RETRIES);
+      |                                                             ^~
+      |                                                             |
+      |                                                             int
+In file included from ..\src\arrayemployees.c:14:
+..\src\validations.h:15:85: note: expected 'char *' but argument is of type 'int'
+   15 | int inputName(char* pString, int len, char* inputMessage, char* errorMessage, char* min, char* max, int retries);
+      |                                                                               ~~~~~~^~~
+..\src\arrayemployees.c:227:65: warning: passing argument 6 of 'inputName' makes pointer from integer without a cast [-Wint-conversion]
+  227 |         inputName(name, len, MSG_INPUT_NAME, MSG_ERROR_ADD, 65, 122, RETRIES);
+      |                                                                 ^~~
+      |                                                                 |
+      |                                                                 int
+In file included from ..\src\arrayemployees.c:14:
+..\src\validations.h:15:96: note: expected 'char *' but argument is of type 'int'
+   15 | int inputName(char* pString, int len, char* inputMessage, char* errorMessage, char* min, char* max, int retries);
+      |                                                                                          ~~~~~~^~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:20:07 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c:58:5: error: conflicting types for 'inputName'
+   58 | int inputName(char* pString, int len, char* inputMessage, char* errorMessage, int retries)
+      |     ^~~~~~~~~
 In file included from ..\src\validations.c:7:
-..\src\validations.h:13:21: note: expected 'char *' but argument is of type 'int'
-   13 | int getChar  (char* cadena,  int   longitud);
-      |               ~~~~~~^~~~~~
-18:13:10 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:34:8: warning: unused variable 'option' [-Wunused-variable]
-   34 |  char  option[LEN];
-      |        ^~~~~~
-..\src\main.c:29:8: warning: variable 'stateFactB' set but not used [-Wunused-but-set-variable]
-   29 |  int   stateFactB;
-      |        ^~~~~~~~~~
-..\src\main.c:59:3: warning: 'input' is used uninitialized in this function [-Wuninitialized]
-   59 |   switch(input)
-      |   ^~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-18:13:29 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:58:3: warning: 'input' is used uninitialized in this function [-Wuninitialized]
-   58 |   switch(input)
-      |   ^~~~~~
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-18:14:04 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:15:24 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-..\src\menu.c: In function 'menu':
-..\src\menu.c:8:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    8 |  printf("\n1. Ingresar 1er operando (A=%d)", a);
-      |                                        ~^    ~
-      |                                         |    |
-      |                                         int  int *
-      |                                        %n
-..\src\menu.c:9:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    9 |  printf("\n2. Ingresar 2do operando (B=%d)", b);
-      |                                        ~^    ~
-      |                                         |    |
-      |                                         int  int *
-      |                                        %n
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:17:23 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-..\src\menu.c: In function 'menu':
-..\src\menu.c:8:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    8 |  printf("\n1. Ingresar 1er operando (A=%d)", a);
-      |                                        ~^    ~
-      |                                         |    |
-      |                                         int  int *
-      |                                        %n
-..\src\menu.c:9:41: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
-    9 |  printf("\n2. Ingresar 2do operando (B=%d)", b);
-      |                                        ~^    ~
-      |                                         |    |
-      |                                         int  int *
-      |                                        %n
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-18:17:42 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:19:47 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:23:52 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:25:13 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:28:16 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:38:8: warning: unused variable 'confirm' [-Wunused-variable]
-   38 |  char  confirm;
-      |        ^~~~~~~
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-18:28:24 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:29:29 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:36:09 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:71:34: warning: passing argument 3 of 'add' from incompatible pointer type [-Wincompatible-pointer-types]
-   71 |     stateAdd=add(valueA, valueB, &resultSum);
-      |                                  ^~~~~~~~~~
-      |                                  |
-      |                                  int *
-In file included from ..\src\main.c:10:
-..\src\operations.h:11:37: note: expected 'float *' but argument is of type 'int *'
-   11 | int add       (int a, int b, float* pResult);
-      |                              ~~~~~~~^~~~~~~
-..\src\main.c:72:40: warning: passing argument 3 of 'subtract' from incompatible pointer type [-Wincompatible-pointer-types]
-   72 |     stateSubt=subtract(valueA, valueB, &resultSubt);
-      |                                        ^~~~~~~~~~~
-      |                                        |
-      |                                        int *
-In file included from ..\src\main.c:10:
-..\src\operations.h:12:37: note: expected 'float *' but argument is of type 'int *'
-   12 | int subtract  (int a, int b, float* pResult);
-      |                              ~~~~~~~^~~~~~~
-..\src\main.c:73:40: warning: passing argument 3 of 'multiply' from incompatible pointer type [-Wincompatible-pointer-types]
-   73 |     stateMult=multiply(valueA, valueB, &resultMult);
-      |                                        ^~~~~~~~~~~
-      |                                        |
-      |                                        int *
-In file included from ..\src\main.c:10:
-..\src\operations.h:13:37: note: expected 'float *' but argument is of type 'int *'
-   13 | int multiply  (int a, int b, float* pResult);
-      |                              ~~~~~~~^~~~~~~
-..\src\main.c:75:34: warning: passing argument 2 of 'factorial' from incompatible pointer type [-Wincompatible-pointer-types]
-   75 |     stateFactA=factorial(valueA, &resultFactA);
-      |                                  ^~~~~~~~~~~~
-      |                                  |
-      |                                  int *
-In file included from ..\src\main.c:10:
-..\src\operations.h:15:37: note: expected 'float *' but argument is of type 'int *'
-   15 | int factorial (int n,        float* pResult);
-      |                              ~~~~~~~^~~~~~~
-..\src\main.c:76:34: warning: passing argument 2 of 'factorial' from incompatible pointer type [-Wincompatible-pointer-types]
-   76 |     stateFactB=factorial(valueB, &resultFactB);
-      |                                  ^~~~~~~~~~~~
-      |                                  |
-      |                                  int *
-In file included from ..\src\main.c:10:
-..\src\operations.h:15:37: note: expected 'float *' but argument is of type 'int *'
-   15 | int factorial (int n,        float* pResult);
-      |                              ~~~~~~~^~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-..\src\operations.c:16:5: error: conflicting types for 'add'
-   16 | int add(int a, int b, int* pResult)
-      |     ^~~
-In file included from ..\src\operations.c:4:
-..\src\operations.h:11:5: note: previous declaration of 'add' was here
-   11 | int add       (int a, int b, float* pResult);
-      |     ^~~
-..\src\operations.c:38:5: error: conflicting types for 'subtract'
-   38 | int subtract(int a, int b, int* pResult)
-      |     ^~~~~~~~
-In file included from ..\src\operations.c:4:
-..\src\operations.h:12:5: note: previous declaration of 'subtract' was here
-   12 | int subtract  (int a, int b, float* pResult);
-      |     ^~~~~~~~
-..\src\operations.c:60:5: error: conflicting types for 'multiply'
-   60 | int multiply(int a, int b, int* pResult)
-      |     ^~~~~~~~
-In file included from ..\src\operations.c:4:
-..\src\operations.h:13:5: note: previous declaration of 'multiply' was here
-   13 | int multiply  (int a, int b, float* pResult);
-      |     ^~~~~~~~
-..\src\operations.c:110:5: error: conflicting types for 'factorial'
-  110 | int factorial(int n, int* pResult)
+..\src\validations.h:15:5: note: previous declaration of 'inputName' was here
+   15 | int inputName(char* pString, int len, char* inputMessage, char* errorMessage, char* min, char* max, int retries);
       |     ^~~~~~~~~
-In file included from ..\src\operations.c:4:
-..\src\operations.h:15:5: note: previous declaration of 'factorial' was here
-   15 | int factorial (int n,        float* pResult);
-      |     ^~~~~~~~~
-18:36:43 **** Incremental Build of configuration Debug for project TP1 ****
+23:20:22 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:38:37 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:40:54 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-..\src\main.c: In function 'main':
-..\src\main.c:60:3: warning: implicit declaration of function 'System'; did you mean 'system'? [-Wimplicit-function-declaration]
-   60 |   System("cls");
-      |   ^~~~~~
-      |   system
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\main.o: in function `main':
-D:\eclipse-workspace\tp_laboratorio_1\TP1\Debug/../src/main.c:60: undefined reference to `System'
-collect2.exe: error: ld returned 1 exit status
-18:41:04 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:46:54 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:51:05 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-18:53:06 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:53:57 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-18:58:50 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:00:49 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:02:15 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:02:38 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:02:54 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:03:12 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:07:41 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-19:10:45 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-..\src\operations.c: In function 'multiply':
-..\src\operations.c:72:4: error: break statement not within loop or switch
-   72 |    break;
-      |    ^~~~~
-19:10:55 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-19:11:35 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\operations.o" "..\\src\\operations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-19:14:45 **** Incremental Build of configuration Debug for project TP1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
-gcc -o TP1.exe "src\\main.o" "src\\menu.o" "src\\operations.o" "src\\validations.o" 
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
-Info: Nothing to build for TP1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:21:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:43:53 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+..\src\validations.c: In function 'concatSurnameName':
+..\src\validations.c:195:18: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+  195 |   surnameName[0]=toupper(surnameName[0]);
+      |                  ^~~~~~~
+..\src\validations.c:200:7: warning: implicit declaration of function 'isspace' [-Wimplicit-function-declaration]
+  200 |    if(isspace(surnameName[i]))
+      |       ^~~~~~~
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:44:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+23:45:48 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+Command canceled
+23:45:57 **** Rebuild of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printstring.o" "..\\src\\printstring.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validations.o" "..\\src\\validations.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arrayemployees.o" "..\\src\\arrayemployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP2.exe "src\\arrayemployees.o" "src\\main.o" "src\\printstring.o" "src\\validations.o" 
+Info: Nothing to build for TP2
